@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <!-- Authors -->
+            <div class="col-md-8 mt-4 left">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="card-title">Authors</div>
+                        <ol>
+                            {% for author in authors %}
+                                <li>{{ author }}</li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+        </div>
+    </div>
+{% endblock content %}
